@@ -9,8 +9,8 @@
   </svelte:head>
   
   <section>
-    <h1>ブログ</h1>
-    <ul>
+    <h1 >ブログ</h1>
+    <ul class="text-3xl font-bold underline">
       {#each data.contents as content}
         <li><a href="{content.id}">{content.title}</a></li>
       {/each}
