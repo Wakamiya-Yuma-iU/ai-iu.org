@@ -1,6 +1,7 @@
 <script lang="ts">
     let isOpen = false;
     let openedSubmenu: string | null = null;
+    import logo from '$lib/assets/logo.png';
   
     const menuItems = [
       {
@@ -42,11 +43,11 @@
     }
   </style>
   
-  <header class="bg-gray-800 text-white">
+  <header class="bg-gray-800 text-white index z-10" >
     <div class="mr-4 mx-auto p-4 flex justify-between items-center">
       <div class="text-lg font-semibold">
         <a href="/">
-
+          <img src={logo} alt="iU大学 AIサークル" class="h-14" />
         </a>
       </div>
       <div class="lg:hidden">
@@ -61,7 +62,7 @@
           {#if submenu}
             <div class="relative nav-item">
               <a href={href} class="text-white hover:text-gray-300">{name}</a>
-              <div class="subnav bg-gray-800 text-white py-2 px-4">
+              <div class="subnav bg-gray-800 text-white py-2 px-4 z-10" >
                 {#each submenu as { name, href }}
                   <a href={href} class="block mt-4 hover:text-gray-300">{name}</a>
                 {/each}
