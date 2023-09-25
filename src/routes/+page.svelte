@@ -2,7 +2,11 @@
     import { onMount } from 'svelte';
     import heroVideoPath from '$lib/assets/hero.mp4';
   
-    let catchphrases = ['AI関連技術に関する、活用方法・技術分野を模索','学内・周辺地域でのAI関連技術の利活用を促進する', '既存モデルの活用法・新たなモデルの作成・AI倫理', '自然言語処理や機械学種についてサークルで独自に研究し、地域や学内での活用を目指す'];
+    let catchphrases = [
+        "未来を創る、AIの力を引き出す",
+        "AI技術で地域を変革、新しい未来を作る",
+        "イノベーションの火花を、私たちと一緒に散らそう"
+    ];
     let index = 0;
     let opacity = 1;
   
@@ -12,8 +16,8 @@
         setTimeout(() => {
           index = (index + 1) % catchphrases.length;
           opacity = 1;
-        }, 1000);
-      }, 4000);
+        }, 700);
+      }, 3000);
   
       return () => clearInterval(interval);
     });
