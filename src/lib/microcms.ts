@@ -14,6 +14,9 @@ export type Blog = {
   revisedAt: string;
   title: string;
   content: string;
+  category:{
+    name: string;
+  }
   eyecatch?: MicroCMSImage;
 };
 export type BlogResponse = {
@@ -21,6 +24,16 @@ export type BlogResponse = {
   offset: number;
   limit: number;
   contents: Blog[];
+};
+
+export type Content = {
+  id: string;
+  title: string;
+  eyecatch?: { url: string }
+  category: {
+      name: string;
+  };
+  publishedAt: string;
 };
 
 //APIの呼び出し
